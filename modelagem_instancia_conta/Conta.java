@@ -1,7 +1,7 @@
 public class Conta {
     private int numero;
     private String titular;
-    private double saldo;
+    protected double saldo;
 
     public Conta(int numero, String titular, double saldo) {
         this.numero = numero;
