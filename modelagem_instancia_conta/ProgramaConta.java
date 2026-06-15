@@ -4,6 +4,14 @@ public class ProgramaConta {
         ContaCorrente cc = new ContaCorrente(123, "Vitor", 1000, 500);
         ContaPoupanca cp = new ContaPoupanca(456, "Lorran", 1000);
 
+        System.out.println(cc.getTitular());
+        System.out.println(cc.getNumero());
+        System.out.println(cc.getSaldo() + "\n");
+
+        System.out.println(cp.getTitular());
+        System.out.println(cp.getNumero());
+        System.out.println(cp.getSaldo() + "\n");
+
         cc.sacar(1300); // usa limite
         System.out.println(cc.getSaldo());
 
