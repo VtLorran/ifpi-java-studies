@@ -2,13 +2,19 @@ public class Imovel {
     private int id;
     private double valor;
     private Endereco endereco;
-    private boolean disponivel = true;
+    private boolean disponivel;
 
-    public Imovel(int id, double valor, Endereco endereco) {
+
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
-        this.disponivel = true;
     }
 
     public void exibirDetalhes() {

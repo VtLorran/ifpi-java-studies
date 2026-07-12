@@ -4,9 +4,11 @@ public class Apartamento extends Imovel {
     private int andar;
     private double valorCondominio;
 
-    public Apartamento(int id, Endereco endereco, double valor, int andar, double valorCondominio) {
-        super(id, valor, endereco);
+    public void setAndar(int andar) {
         this.andar = andar;
+    }
+
+    public void setValorCondominio(double valorCondominio) {
         this.valorCondominio = valorCondominio;
     }
 
@@ -18,7 +20,7 @@ public class Apartamento extends Imovel {
 
     public Contrato vender(Cliente cliente, Corretor corretor) {
         if (!this.isDisponivel()) {
-            throw new IllegalStateException("Erro: Este apartamento não está disponível para venda.");
+            System.out.println("Erro: Este apartamento não está disponível para venda.");
         }
 
         Contrato novoContrato = new Contrato(this, cliente, corretor, this.getValor(), TipoContrato.VENDA,
