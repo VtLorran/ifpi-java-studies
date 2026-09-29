@@ -1,0 +1,8 @@
+# Executar o programa
+mvn clean compile exec:java -Dexec.mainClass="br.edu.ifpi.Principal.Main"
+
+# Ver dados no MySQL
+sudo mysql -u root -e "USE sistema_imobiliaria; SELECT * FROM Pessoa; SELECT * FROM Cliente;"
+
+# Ver estrutura das tabelas
+sudo mysql -u root -e "USE sistema_imobiliaria; DESCRIBE Pessoa; DESCRIBE Cliente;" 
